@@ -1,0 +1,28 @@
+{
+    "name": "Extension Translator",
+    "description": "Находит самые встречающиеся слова на странице и переводит их на ваш язык",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons": {},
+    "action": {
+        "default_icon": {},
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "windows",
+        "tabs"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "jquery.js",
+                "contentscript.js"
+            ]
+        }
+    ]
+}
